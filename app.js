@@ -5,16 +5,14 @@ const app = express()
 const PORT = 5000
 
 
-
 app.use(bodyParser.json())
 
 
-app.use('/click', require('./src/click.router'))
+app.use('/api', require('./src/click.router'))
 
 
+app.use(express.static('client/build'))
 
-
-// app.use(express.static('client/build'))
 
 const start = async () => {
     try {

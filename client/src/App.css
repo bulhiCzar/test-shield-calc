@@ -76,7 +76,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 /*Обнуление стилей*/
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .wrapper{
     min-height: 100vh;
     min-width: 100vw;
@@ -86,5 +89,35 @@ code {
     align-items: center;
 }
 .body{
-    transform: translateY(-50%);
+    width: 450px;
+    margin: 10px;
+    background-color: azure;
+}
+.header{
+    text-align: center;
+    font-size: 18px;
+}
+.selector{
+    margin: 10px;
+    display: flex;
+}
+.group{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+
+    font-size: 18px;
+    width: 50%;
+}
+
+@media (max-width: 320px) {
+    .selector{
+        display: block;
+    }
+    .label{
+        background-color: aquamarine;
+        text-align: center;
+        width: 100%;
+    }
 }

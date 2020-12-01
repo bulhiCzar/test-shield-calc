@@ -1,18 +1,20 @@
 const {Router} = require('express')
 
-const route = Router()
+const router = Router()
 
-route.post(
-    '/',
-    async (req, res)=>{
+router.post(
+    '/click',
+    async (req, res) => {
         try {
-            const {} = req.body
+            const {value} = req.body
 
-            res.json({m: 'good'})
-        }catch (e) {
+            console.log(value)
+
+            res.json({m: 'good', value})
+        } catch (e) {
             res.json({m: 'error'})
         }
     }
 )
 
-module.exports = route
+module.exports = router
